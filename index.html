@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="CSS/styel_for_java.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="greet">Нарисовать фигуру онлайн</div>
+    <div class="speed-button-wrapper">
+        <div class="to-input-speed-wrapper">
+            <input class="to-input-speed" type="text" placeholder="Скорость отрисовки:" value="">
+        </div>
+    </div>
+    <div class="choose">Выберите, что хотите нарисовать: </div>
+    <div class="choose-list">
+        <div class="list-item" id="robot">Робот</div>
+        <div class="list-item" id="snowman">Снеговик</div>
+        <div class="list-item" id="kub">Живой куб</div>
+        <div class="list-item" id="bird">Птица</div>
+    </div>
+    <div class="forms-container"></div>
+    <div class="forms">
+        <form class="form robot" action="">
+            <div class="input">
+                <input class="to-input" type="text" id="headSizeRobot" placeholder="Введите размер головы:">
+            </div>
+            <div class="input">
+                <input class="to-input" type="text" id="widthBodyRobot" placeholder="Введите ширину тела:">
+            </div>
+            <div class="input">
+                <input class="to-input" type="text" id="heightBodyRobot" placeholder="Введите высоту тела:">
+            </div>
+            <div class="input">
+                <input class="to-input" type="text" id="lengthHandsRobot" placeholder="Введите длину рук:">
+            </div>
+            <div class="input">
+                <input class="to-input" type="text" id="widthHandsRobot" placeholder="Введите ширину рук:">
+            </div>
+            <div class="input">
+                <input class="to-input" type="text" id="legsSizeRobot" placeholder="Введите размер ног:">
+            </div>
+            <div class="input">
+                <input class="to-input" type="text" id="colorRobot" placeholder="Введите цвет робота:">
+            </div>
+            <div class="asyncio-wrapper"><input class="asyncio-input" type="checkbox" name="asyncio" checked value="">Автоматическая перерисовка</div>
+            <div class="draw" >Нарисовать робота</div>
+        </form>
+        <form class="form snowman" action="">
+            <div class="input">
+                <input class="to-input" type="text" id="headSizeSnowman" placeholder="Введите размер головы:">
+            </div>
+            <div class="input">
+                <input class="to-input" type="text" id="middleSizeSnowman" placeholder="Введите размер средней части:">
+            </div>
+            <div class="input">
+                <input class="to-input" type="text" id="lowSizeSnowman" placeholder="Введите размер нижней части:">
+            </div>
+            <div class="input">
+                <input class="to-input" type="text" id="colorSnowman" placeholder="Введите цвет снеговика:">
+            </div>
+            <div class="asyncio-wrapper"><input class="asyncio-input" type="checkbox" name="asyncio" checked value="">Автоматическая перерисовка</div>
+            <div class="draw" >Нарисовать снеговика</div>
+        </form>
+        <form class="form kub" action="">
+            <div class="input">
+                <input class="to-input" type="text" id="kubSize" placeholder="Введите размер куба:">
+            </div>
+            <div class="input">
+                <input class="to-input" type="text" id="colorKub" placeholder="Введите цвет куба:">
+            </div>
+            <div class="asyncio-wrapper"><input class="asyncio-input" type="checkbox" name="asyncio" checked value="">Автоматическая перерисовка</div>
+            <div class="draw" >Нарисовать куб</div>
+        </form>
+        <form class="form bird" action="">
+            <div class="input">
+                <input class="to-input" type="text" id="headSizeBird" placeholder="Введите размер головы:">
+            </div>
+            <div class="input">
+                <input class="to-input" type="text" id="beakSizeBird" placeholder="Введите размер клюва:">
+            </div>
+            <div class="input">
+                <input class="to-input" type="text" id="colorBird" placeholder="Введите цвет птицы:">
+            </div>
+            <div class="asyncio-wrapper"><input class="asyncio-input" type="checkbox" name="asyncio" checked value="">Автоматическая перерисовка</div>
+            <div class="draw" >Нарисовать птицу</div>
+        </form>
+    </div>
+    <script src="JS/script.js"></script>
+</body>
+</html>

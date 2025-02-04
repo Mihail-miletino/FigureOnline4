@@ -1,4 +1,4 @@
-const body = document.querySelector("body");
+const body = document.querySelector("body"); 
 const list = document.querySelector(".choose-list");
 const forms = document.querySelector(".forms");
 const formsContainer = document.querySelector(".forms-container");
@@ -9,9 +9,8 @@ const speedInput = document.querySelector(".to-input-speed");
 let figure = "";
 let figureInscr = "";
 let k = 0;
-for (let index = 0; index < forms.children.length; index++){
-    forms.children[index].style.display = "none";
-};
+
+[...forms.children].forEach((form) => form.style.display = "none");
 
 const sp = new Proxy({
     speed: 2000,
@@ -432,17 +431,16 @@ const createWrapper = (obj) => {
 };
 
 list.addEventListener("click", (event) => {
-    for (let input of inputs){
-        input.value = "";
-    };
-    for (let index = 0; index < forms.children.length; index++){
-        if (forms.children[index].classList.contains(event.target.id)){
+    inputs.forEach((input) => input.value = "");
+    let arrForms = [...forms.children];
+    arrForms.forEach((form) => {
+        if (form.classList.contains(event.target.id)){
             figure = event.target.id;
             figureInscr = event.target.textContent.toLowerCase();
-            forms.children[index].style.display = "flex";
-            forms.children[index].lastElementChild.addEventListener("click", createFigure);
+            form.style.display = "flex";
+            form.lastElementChild.addEventListener("click", createFigure);
         } else{
-            forms.children[index].style.display = "none";
+            form.style.display = "none";
         };
-    };
+    });
 });
